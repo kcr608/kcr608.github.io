@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturday PM: Long Run</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav">
+        <button class="nav-button" onclick="goToToday()">Today's Workout</button>
+        <button class="nav-button" onclick="window.location.href='index.html'">Overview</button>
+        <button class="nav-button" onclick="window.location.href='saturday_am.html'">Saturday AM</button>
+        <button class="nav-button" onclick="window.location.href='sunday.html'">Sunday</button>
+    </div>
+
+    <h1>SATURDAY PM: LONG RUN</h1>
+    
+    <div class="progress-container">
+        <p>Completion: <span id="completion-counter">0/0 (0%)</span></p>
+        <div class="progress-bar">
+            <div id="progress-bar-fill" style="width: 0%"></div>
+        </div>
+        <button onclick="resetCheckboxes()">Reset Progress</button>
+    </div>
+
+    <div class="section">
+        <h2>FOCUS</h2>
+        <p>Aerobic endurance, recovery, mental toughness</p>
+    </div>
+
+    <div class="section">
+        <h2>DURATION</h2>
+        <p>60-75 minutes</p>
+    </div>
+
+    <div class="section">
+        <h2>LOCATION</h2>
+        <p>Air Force Gym (outdoor path or indoor track)</p>
+    </div>
+
+    <div class="section">
+        <h2>WARM-UP (8 minutes)</h2>
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Light Jog</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>800m (2 laps) - Very easy pace</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Dynamic Stretching</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>3 minutes - Leg swings, hip circles, arm swings</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Form Strides</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>3 × 50m - Focus on efficient form, not speed</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>LONG RECOVERY RUN (40-50 minutes)</h2>
+        <p><strong>Note:</strong> This is a recovery-focused endurance session. Keep intensity deliberately low.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Duration/Distance</th>
+                    <th>Intensity</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Steady State Run</td>
+                    <td>4-6 miles</td>
+                    <td>65-70% max HR</td>
+                    <td>Conversation pace</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Focus Areas</td>
+                    <td>Throughout</td>
+                    <td>-</td>
+                    <td>Efficient form<br>Nasal breathing if possible<br>Remain strictly aerobic (no heavy breathing)</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>MOBILITY & RECOVERY WORK (10 minutes)</h2>
+        <p><strong>Note:</strong> Focus on full range of motion, controlled movement, and breathing</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Movement Series</th>
+                    <th>Duration</th>
+                    <th>Focus Areas</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hip Mobility Flow</td>
+                    <td>3 minutes</td>
+                    <td>Internal/external rotation, flexion</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Ankle/Foot Mobility</td>
+                    <td>2 minutes</td>
+                    <td>Dorsiflexion, plantar fascia release</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Hamstring/Calf Series</td>
+                    <td>3 minutes</td>
+                    <td>Active and static stretching</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>BREATH TRAINING (5 minutes)</h2>
+        <p><strong>Note:</strong> Use the breath training app for guided O2 tables.</p>
+        
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">O2 Tables on App</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>5 minutes - Short recovery session</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>COOL-DOWN (5 minutes)</h2>
+        <ul>
+            <li>Light walking: 3 minutes</li>
+            <li>Breathing recovery: 8-10 deep diaphragmatic breaths</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>NUTRITION</h2>
+        <h3>Pre-Workout (60 min before)</h3>
+        <ul>
+            <li>Protein: 20g</li>
+            <li>Carbohydrates: 40-50g</li>
+            <li>Fat: 5-10g</li>
+            <li><strong>Example:</strong> Greek yogurt with fruit and honey</li>
+        </ul>
+
+        <h3>During Workout (if run >45 minutes)</h3>
+        <ul>
+            <li>Carbohydrates: 15-30g</li>
+            <li><strong>Example:</strong> Sports drink or small energy gel</li>
+        </ul>
+
+        <h3>Post-Workout (within 30 min)</h3>
+        <ul>
+            <li>Protein: 30g</li>
+            <li>Carbohydrates: 50-60g</li>
+            <li>Fat: 10-15g</li>
+            <li><strong>Example:</strong> Chicken or fish with rice/potato and vegetables</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>HYDRATION</h2>
+        <ul>
+            <li>Pre-workout: 16-20oz water</li>
+            <li>During workout: 24-32oz water (carried or water stations)</li>
+            <li>Post-workout: 24-32oz electrolyte drink</li>
+        </ul>
+    </div>
+
+    <div class="section performance-tracking">
+        <h2>PERFORMANCE TRACKING</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total Distance</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Total Time</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Average Pace</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Average Heart Rate</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>O2 Table Comfort (1-10)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Overall Fatigue (1-10)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Leg Soreness (1-10)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .meal-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            padding: 15px;
+            transition: transform 0.2s;
+        }
+        
+        .meal-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .meal-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #34495e;
+        }
+        
+        .macro-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .macro {
+            background-color: #f2f2f2;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        
+        .protein { background-color: #fadbd8; }
+        .carbs { background-color: #d4efdf; }
+        .fat { background-color: #fdebd0; }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+        
+        .tab.active {
+            background-color: #fff;
+            border-bottom: 1px solid #fff;
+            margin-bottom: -1px;
+            font-weight: 600;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .ingredient-list {
+            margin-bottom: 10px;
+        }
+        
+        .ingredient-list h4 {
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+        
+        .prep-steps {
+            margin-top: 15px;
+        }
+        
+        .prep-steps h4 {
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+        
+        .prep-steps ol {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <button class="nav-button" onclick="goToToday()">Today's Workout</button>
+        <button class="nav-button" onclick="window.location.href='index.html'">Overview</button>
+    </div>
+
+    <h1>Nutrition Guide</h1>
+    
+    <div class="section">
+        <h2>Nutrition Philosophy</h2>
+        <p>This nutrition plan is designed to support your training program with meals that are:</p>
+        <ul>
+            <li><strong>Cost-Effective:</strong> Budget-friendly ingredients without sacrificing nutrition</li>
+            <li><strong>Time-Efficient:</strong> Quick to prepare with minimal cooking time</li>
+            <li><strong>Performance-Focused:</strong> Properly timed macronutrients for optimal training results</li>
+            <li><strong>Recovery-Enhanced:</strong> Ingredients that support muscle repair and joint health</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Nutritional Requirements</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Macronutrient</th>
+                    <th>Training Days</th>
+                    <th>Recovery Days</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Protein</td>
+                    <td>1.8-2.0g/lb bodyweight</td>
+                    <td>1.5-1.8g/lb bodyweight</td>
+                </tr>
+                <tr>
+                    <td>Carbohydrates</td>
+                    <td>3.0-4.0g/lb bodyweight</td>
+                    <td>2.0-2.5g/lb bodyweight</td>
+                </tr>
+                <tr>
+                    <td>Fats</td>
+                    <td>0.4-0.5g/lb bodyweight</td>
+                    <td>0.5-0.7g/lb bodyweight</td>
+                </tr>
+                <tr>
+                    <td>Water</td>
+                    <td>0.7 × bodyweight (oz)</td>
+                    <td>0.6 × bodyweight (oz)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Meal Plans</h2>
+        
+        <div class="tabs">
+            <div class="tab active" onclick="openTab(event, 'training')">Training Day Meals</div>
+            <div class="tab" onclick="openTab(event, 'recovery')">Recovery Day Meals</div>
+            <div class="tab" onclick="openTab(event, 'prep')">Weekly Meal Prep</div>
+        </div>
+        
+        <div id="training" class="tab-content active">
+            <h3>Training Day Meals</h3>
+            
+            <div class="meal-card">
+                <div class="meal-title">Pre-Morning Workout Breakfast</div>
+                <div class="macro-stats">
+                    <div class="macro protein">Protein: 30-40g</div>
+                    <div class="macro carbs">Carbs: 50-60g</div>
+                    <div class="macro fat">Fat: 10-15g</div>
+                </div>
+                <p><strong>Quick Protein Oatmeal:</strong></p>
+                <ul>
+                    <li>1 cup quick oats (30g carbs)</li>
+                    <li>1 scoop protein powder (25g protein)</li>
+                    <li>1 tbsp honey (15g carbs)</li>
+                    <li>1/2 cup berries (10g carbs)</li>
+                    <li>1 tbsp nut butter (8g fat, 3g protein)</li>
+                </ul>
+                <p><strong>Prep Time:</strong> 5 minutes | <strong>Cost Per Serving:</strong> $1.50-2.00</p>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Post-Morning Workout Meal</div>
+                <div class="macro-stats">
+                    <div class="macro protein">Protein: 30-40g</div>
+                    <div class="macro carbs">Carbs: 50-70g</div>
+                    <div class="macro fat">Fat: 5-10g</div>
+                </div>
+                <p><strong>Quick Recovery Shake + Bagel:</strong></p>
+                <ul>
+                    <li>1 scoop protein powder (25g protein)</li>
+                    <li>1 banana (25g carbs)</li>
+                    <li>1 tbsp honey (15g carbs)</li>
+                    <li>1 whole grain bagel (30g carbs, 5g protein)</li>
+                    <li>8oz almond milk (1g protein, 2g fat)</li>
+                </ul>
+                <p><strong>Prep Time:</strong> 3 minutes | <strong>Cost Per Serving:</strong> $2.00-2.50</p>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Lunch</div>
+                <div class="macro-stats">
+                    <div class="macro protein">Protein: 40-50g</div>
+                    <div class="macro carbs">Carbs: 60-80g</div>
+                    <div class="macro fat">Fat: 15-20g</div>
+                </div>
+                <p><strong>Protein-Packed Rice Bowl:</strong></p>
+                <ul>
+                    <li>6oz lean ground turkey (40g protein, 7g fat)</li>
+                    <li>1 cup cooked rice (45g carbs)</li>
+                    <li>1 cup mixed vegetables (15g carbs)</li>
+                    <li>1/4 avocado (7g fat)</li>
+                    <li>Low-sodium soy sauce or hot sauce to taste</li>
+                </ul>
+                <p><strong>Prep Time:</strong> 15 minutes | <strong>Cost Per Serving:</strong> $3.00-3.50</p>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Pre-Afternoon Workout Snack</div>
+                <div class="macro-stats">
+                    <div class="macro protein">Protein: 20-25g</div>
+                    <div class="macro carbs">Carbs: 30-40g</div>
+                    <div class="macro fat">Fat: 5-10g</div>
+                </div>
+                <p><strong>Greek Yogurt Power Snack:</strong></p>
+                <ul>
+                    <li>1 cup Greek yogurt (20g protein, 5g fat)</li>
+                    <li>1/3 cup granola (20g carbs, 5g fat)</li>
+                    <li>1 tbsp honey (15g carbs)</li>
+                </ul>
+                <p><strong>Prep Time:</strong> 2 minutes | <strong>Cost Per Serving:</strong> $1.50-2.00</p>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Post-Afternoon Workout Meal</div>
+                <div class="macro-stats">
+                    <div class="macro protein">Protein: 30-40g</div>
+                    <div class="macro carbs">Carbs: 40-60g</div>
+                    <div class="macro fat">Fat: 10-15g</div>
+                </div>
+                <p><strong>Quick Tuna Wrap:</strong></p>
+                <ul>
+                    <li>2 cans tuna (40g protein)</li>
+                    <li>2 whole wheat tortillas (40g carbs, 6g protein)</li>
+                    <li>1 tbsp light mayo (5g fat)</li>
+                    <li>1 cup shredded lettuce</li>
+                    <li>1/4 cup diced tomato</li>
+                    <li>1 tbsp olive oil (14g fat)</li>
+                </ul>
+                <p><strong>Prep Time:</strong> 5 minutes | <strong>Cost Per Serving:</strong> $2.50-3.00</p>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Dinner</div>
+                <div class="macro-stats">
+                    <div class="macro protein">Protein: 40-50g</div>
+                    <div class="macro carbs">Carbs: 50-70g</div>
+                    <div class="macro fat">Fat: 15-20g</div>
+                </div>
+                <p><strong>Sheet Pan Chicken & Sweet Potato:</strong></p>
+                <ul>
+                    <li>8oz chicken breast (50g protein, 3g fat)</li>
+                    <li>1 large sweet potato (30g carbs)</li>
+                    <li>2 cups roasted vegetables (20g carbs)</li>
+                    <li>1 tbsp olive oil (14g fat)</li>
+                    <li>Herbs and spices (garlic powder, paprika, etc.)</li>
+                </ul>
+                <p><strong>Prep Time:</strong> 10 minutes prep, 25 minutes cook | <strong>Cost Per Serving:</strong> $3.50-4.00</p>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Evening Snack (Optional)</div>
+                <div class="macro-stats">
+                    <div class="macro protein">Protein: 20-25g</div>
+                    <div class="macro carbs">Carbs: 0-10g</div>
+                    <div class="macro fat">Fat: 5-10g</div>
+                </div>
+                <p><strong>Cottage Cheese & Nut Mix:</strong></p>
+                <ul>
+                    <li>1 cup cottage cheese (24g protein, 5g fat)</li>
+                    <li>1 tbsp mixed nuts (5g fat, 2g protein, 3g carbs)</li>
+                    <li>Cinnamon to taste</li>
+                </ul>
+                <p><strong>Prep Time:</strong> 1 minute | <strong>Cost Per Serving:</strong> $1.00-1.50</p>
+            </div>
+        </div>
+        
+        <div id="recovery" class="tab-content">
+            <h3>Recovery Day Meals</h3>
+            
+            <div class="meal-card">
+                <div class="meal-title">Breakfast</div>
+                <div class="macro-stats">
+                    <div class="macro protein">Protein: 30-35g</div>
+                    <div class="macro carbs">Carbs: 40-50g</div>
+                    <div class="macro fat">Fat: 15-20g</div>
+                </div>
+                <p><strong>Protein Pancakes:</strong></p>
+                <ul>
+                    <li>1 cup whole wheat pancake mix (30g carbs)</li>
+                    <li>1 scoop protein powder (25g protein)</li>
+                    <li>1 whole egg (6g protein, 5g fat)</li>
+                    <li>1 tbsp nut butter (8g fat, 3g protein)</li>
+                    <li>1/4 cup berries (5g carbs)</li>
+                </ul>
+                <p><strong>Prep Time:</strong> 10 minutes | <strong>Cost Per Serving:</strong> $2.00-2.50</p>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Mid-Morning Snack</div>
+                <div class="macro-stats">
+                    <div class="macro protein">Protein: 15-20g</div>
+                    <div class="macro carbs">Carbs: 15-20g</div>
+                    <div class="macro fat">Fat: 10-15g</div>
+                </div>
+                <p><strong>Protein Smoothie:</strong></p>
+                <ul>
+                    <li>1 scoop protein powder (25g protein)</li>
+                    <li>1/2 cup frozen berries (10g carbs)</li>
+                    <li>1 tbsp flaxseed (4g fat)</li>
+                    <li>1 tbsp nut butter (8g fat, 3g protein)</li>
+                    <li>8oz almond milk (1g protein, 2g fat)</li>
+                </ul>
+                <p><strong>Prep Time:</strong> 3 minutes | <strong>Cost Per Serving:</strong> $1.50-2.00</p>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Lunch</div>
+                <div class="macro-stats">
+                    <div class="macro protein">Protein: 35-45g</div>
+                    <div class="macro carbs">Carbs: 40-50g</div>
+                    <div class="macro fat">Fat: 15-20g</div>
+                </div>
+                <p><strong>Salmon & Quinoa Bowl:</strong></p>
+                <ul>
+                    <li>5oz canned salmon (35g protein, 10g fat)</li>
+                    <li>1/2 cup cooked quinoa (20g carbs, 4g protein)</li>
+                    <li>1 cup mixed greens</li>
+                    <li>1/4 avocado (7g fat)</li>
+                    <li>1/2 cup cherry tomatoes</li>
+                    <li>1 tbsp olive oil & lemon dressing (14g fat)</li>
+                </ul>
+                <p><strong>Prep Time:</strong> 10 minutes | <strong>Cost Per Serving:</strong> $3.50-4.00</p>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Afternoon Snack</div>
+                <div class="macro-stats">
+                    <div class="macro protein">Protein: 15-20g</div>
+                    <div class="macro carbs">Carbs: 20-30g</div>
+                    <div class="macro fat">Fat: 10-15g</div>
+                </div>
+                <p><strong>Protein Energy Bites:</strong></p>
+                <ul>
+                    <li>1/2 cup oats (15g carbs)</li>
+                    <li>2 tbsp protein powder (10g protein)</li>
+                    <li>1 tbsp honey (15g carbs)</li>
+                    <li>1 tbsp nut butter (8g fat, 3g protein)</li>
+                </ul>
+                <p><strong>Prep Time:</strong> 10 minutes | <strong>Cost Per Serving:</strong> $1.00-1.50</p>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Dinner</div>
+                <div class="macro-stats">
+                    <div class="macro protein">Protein: 40-50g</div>
+                    <div class="macro carbs">Carbs: 30-40g</div>
+                    <div class="macro fat">Fat: 15-20g</div>
+                </div>
+                <p><strong>Slow Cooker Beef & Vegetable Stew:</strong></p>
+                <ul>
+                    <li>6oz lean beef (42g protein, 10g fat)</li>
+                    <li>1 medium potato (20g carbs)</li>
+                    <li>2 cups mixed vegetables (20g carbs)</li>
+                    <li>1 tbsp olive oil (14g fat)</li>
+                    <li>Herbs and spices (bay leaf, thyme, etc.)</li>
+                </ul>
+                <p><strong>Prep Time:</strong> 15 minutes prep, 4-8 hours cook | <strong>Cost Per Serving:</strong> $4.00-4.50</p>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Evening Snack</div>
+                <div class="macro-stats">
+                    <div class="macro protein">Protein: 20-25g</div>
+                    <div class="macro carbs">Carbs: 5-10g</div>
+                    <div class="macro fat">Fat: 10-15g</div>
+                </div>
+                <p><strong>Protein Pudding:</strong></p>
+                <ul>
+                    <li>1 scoop protein powder (25g protein)</li>
+                    <li>1/2 cup Greek yogurt (10g protein, 3g fat)</li>
+                    <li>1 tbsp nut butter (8g fat, 3g protein)</li>
+                    <li>1/4 cup berries (5g carbs)</li>
+                </ul>
+                <p><strong>Prep Time:</strong> 3 minutes | <strong>Cost Per Serving:</strong> $1.50-2.00</p>
+            </div>
+        </div>
+        
+        <div id="prep" class="tab-content">
+            <h3>Weekly Meal Prep Guide</h3>
+            <p>Save time and money by preparing these key components once per week:</p>
+            
+            <div class="meal-card">
+                <div class="meal-title">Protein Prep</div>
+                <div class="ingredient-list">
+                    <h4>Ingredients:</h4>
+                    <ul>
+                        <li>3-4 lbs boneless, skinless chicken breast</li>
+                        <li>2 lbs lean ground turkey</li>
+                        <li>2 dozen eggs</li>
+                    </ul>
+                </div>
+                <div class="prep-steps">
+                    <h4>Preparation:</h4>
+                    <ol>
+                        <li>Season and bake chicken breasts at 375°F for 25-30 minutes</li>
+                        <li>Cook ground turkey with basic seasonings (salt, pepper, garlic)</li>
+                        <li>Hard boil 1 dozen eggs, keep the rest raw</li>
+                        <li>Store in separate containers in refrigerator (3-4 days) or freezer (longer storage)</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Carbohydrate Prep</div>
+                <div class="ingredient-list">
+                    <h4>Ingredients:</h4>
+                    <ul>
+                        <li>4 cups uncooked rice (white or brown)</li>
+                        <li>4-6 large sweet potatoes</li>
+                        <li>2 cups uncooked quinoa</li>
+                    </ul>
+                </div>
+                <div class="prep-steps">
+                    <h4>Preparation:</h4>
+                    <ol>
+                        <li>Cook rice according to package directions</li>
+                        <li>Bake sweet potatoes at 400°F for 45-60 minutes</li>
+                        <li>Cook quinoa according to package directions</li>
+                        <li>Store in separate containers in refrigerator</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Vegetable Prep</div>
+                <div class="ingredient-list">
+                    <h4>Ingredients:</h4>
+                    <ul>
+                        <li>2-3 lbs mixed vegetables (broccoli, carrots, peppers, etc.)</li>
+                        <li>2 bags pre-washed greens for salads</li>
+                        <li>1 container cherry tomatoes</li>
+                        <li>2-3 onions and garlic bulbs for flavoring</li>
+                    </ul>
+                </div>
+                <div class="prep-steps">
+                    <h4>Preparation:</h4>
+                    <ol>
+                        <li>Wash, chop, and roast vegetables with olive oil at 400°F for 20-25 minutes</li>
+                        <li>Store in containers with paper towel to absorb moisture</li>
+                        <li>Keep some vegetables raw for quick snacks</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Quick Snack Prep</div>
+                <div class="ingredient-list">
+                    <h4>Ingredients:</h4>
+                    <ul>
+                        <li>Protein powder (1-2 containers)</li>
+                        <li>Greek yogurt (large container)</li>
+                        <li>Natural nut butter</li>
+                        <li>Oats</li>
+                        <li>Honey</li>
+                        <li>Frozen berries</li>
+                    </ul>
+                </div>
+                <div class="prep-steps">
+                    <h4>Preparation:</h4>
+                    <ol>
+                        <li>Portion greek yogurt into serving containers</li>
+                        <li>Make protein energy bites and store in refrigerator</li>
+                        <li>Prepare smoothie packets with frozen ingredients (minus liquid)</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="meal-card">
+                <div class="meal-title">Weekly Shopping List</div>
+                <p><strong>Protein Sources:</strong></p>
+                <ul>
+                    <li>Chicken breast (3-4 lbs)</li>
+                    <li>Ground turkey (2 lbs)</li>
+                    <li>Eggs (2 dozen)</li>
+                    <li>Canned tuna (6-8 cans)</li>
+                    <li>Protein powder (1-2 containers)</li>
+                    <li>Greek yogurt (large container)</li>
+                    <li>Cottage cheese (1-2 containers)</li>
+                </ul>
+                
+                <p><strong>Carbohydrate Sources:</strong></p>
+                <ul>
+                    <li>Rice (white or brown)</li>
+                    <li>Sweet potatoes (4-6 large)</li>
+                    <li>Quinoa</li>
+                    <li>Oats</li>
+                    <li>Whole wheat tortillas</li>
+                    <li>Whole grain bagels</li>
+                </ul>
+                
+                <p><strong>Fruits & Vegetables:</strong></p>
+                <ul>
+                    <li>Mixed vegetables (broccoli, carrots, peppers)</li>
+                    <li>Salad greens</li>
+                    <li>Bananas</li>
+                    <li>Frozen berries</li>
+                    <li>Avocados (2-3)</li>
+                </ul>
+                
+                <p><strong>Healthy Fats:</strong></p>
+                <ul>
+                    <li>Olive oil</li>
+                    <li>Natural nut butter</li>
+                    <li>Mixed nuts</li>
+                    <li>Flaxseed</li>
+                </ul>
+                
+                <p><strong>Other:</strong></p>
+                <ul>
+                    <li>Almond milk</li>
+                    <li>Honey</li>
+                    <li>Herbs and spices</li>
+                    <li>Light mayo</li>
+                </ul>
+                
+                <p><strong>Estimated Weekly Cost:</strong> $70-90 depending on location and sales</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+            }
+            
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            
+            document.getElementById(tabName).className += " active";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

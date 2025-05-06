@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturday AM: Swimming & Treading</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav">
+        <button class="nav-button" onclick="goToToday()">Today's Workout</button>
+        <button class="nav-button" onclick="window.location.href='index.html'">Overview</button>
+        <button class="nav-button" onclick="window.location.href='saturday_pm.html'">Saturday PM</button>
+        <button class="nav-button" onclick="window.location.href='sunday.html'">Sunday</button>
+    </div>
+
+    <h1>SATURDAY AM: SWIMMING & TREADING FOCUS</h1>
+    
+    <div class="progress-container">
+        <p>Completion: <span id="completion-counter">0/0 (0%)</span></p>
+        <div class="progress-bar">
+            <div id="progress-bar-fill" style="width: 0%"></div>
+        </div>
+        <button onclick="resetCheckboxes()">Reset Progress</button>
+    </div>
+
+    <div class="section">
+        <h2>FOCUS</h2>
+        <p>Swimming endurance, treading efficiency, surface breath-hold, water confidence</p>
+    </div>
+
+    <div class="section">
+        <h2>DURATION</h2>
+        <p>80-90 minutes</p>
+    </div>
+
+    <div class="section">
+        <h2>LOCATION</h2>
+        <p>Air Force Gym (Aquatics Center)</p>
+    </div>
+
+    <div class="section">
+        <h2>WARM-UP (8 minutes)</h2>
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Easy Freestyle</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>200m - Focus on relaxed breathing pattern</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Kick-only with Board</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>100m - Maintain good body position</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Pull-only</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>100m - Focus on catch and pull phase</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Mixed Strokes</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>100m - 25m each stroke if possible</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>TECHNIQUE CIRCUIT (15 minutes)</h2>
+        <p><strong>Note:</strong> Minimal rest between drills, focus on quality movement patterns</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Drill</th>
+                    <th>Distance</th>
+                    <th>Focus Points</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Single-Arm Freestyle</td>
+                    <td>4 × 25m</td>
+                    <td>Rotation and breathing pattern</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Combat Sidestroke</td>
+                    <td>4 × 25m</td>
+                    <td>Efficient glide phase</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Freestyle with Hypoxic Breathing</td>
+                    <td>4 × 25m</td>
+                    <td>Breathe every 5-7-9 strokes</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Streamline Push-Offs</td>
+                    <td>4 × 25m</td>
+                    <td>Maximum distance off wall</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>TREADING WORK (25 minutes)</h2>
+        <p><strong>Note:</strong> This is a major focus area. Progress difficulty as fitness improves.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Drill</th>
+                    <th>Duration</th>
+                    <th>Rest</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Standard Treading</td>
+                    <td>3 minutes</td>
+                    <td>30s</td>
+                    <td>Establish efficient technique, consistent height</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Hands-out Treading</td>
+                    <td>2 minutes</td>
+                    <td>30s</td>
+                    <td>Legs only, hands above water</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Recovery</td>
+                    <td>30 seconds</td>
+                    <td>-</td>
+                    <td>Standard treading, efficiency focus</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Egg-beater Kick Focus</td>
+                    <td>2 minutes</td>
+                    <td>30s</td>
+                    <td>Technique refinement</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Travel Treading</td>
+                    <td>3 minutes</td>
+                    <td>30s</td>
+                    <td>Move across pool while treading</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Recovery</td>
+                    <td>30 seconds</td>
+                    <td>-</td>
+                    <td>Standard treading, efficiency focus</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Alternating Hands-out</td>
+                    <td>3 × 30 seconds</td>
+                    <td>15s between</td>
+                    <td>Alternate right/left/both hands out</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Recovery</td>
+                    <td>1 minute</td>
+                    <td>-</td>
+                    <td>Standard treading, easy</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Ultimate Challenge</td>
+                    <td>1 minute</td>
+                    <td>-</td>
+                    <td>Both hands out, maximum height</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Recovery</td>
+                    <td>2 minutes</td>
+                    <td>-</td>
+                    <td>Standard treading, very easy</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Finisher</td>
+                    <td>5 minutes</td>
+                    <td>-</td>
+                    <td>Standard treading, maintain height consistency</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>STRENGTH-ENDURANCE SWIM (20 minutes)</h2>
+        <p><strong>Note:</strong> Keep rest periods strict for conditioning effect</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Set</th>
+                    <th>Distance/Duration</th>
+                    <th>Rest</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pyramid Set</td>
+                    <td>50-100-150-200-150-100-50m</td>
+                    <td>10s</td>
+                    <td>Maintain strong pace throughout</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Sprint Intervals</td>
+                    <td>8 × 25m</td>
+                    <td>15s</td>
+                    <td>Maximum effort sprints</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Surface Recovery</td>
+                    <td>4 × 25m</td>
+                    <td>30s</td>
+                    <td>Surface for single breath at mid-point</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>BREATH TRAINING (15 minutes)</h2>
+        <p><strong>Note:</strong> Use the breath training app for guided O2 tables. Safe surface breath-hold practice only.</p>
+        
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">O2 Tables on App</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>15 minutes - Surface breath-hold practice with app guidance</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>COOL-DOWN (7 minutes)</h2>
+        <ul>
+            <li>200m easy swimming (mixed strokes)</li>
+            <li>Floating practice: 2 minutes</li>
+            <li>Breathing recovery: 10 deep, relaxed breaths</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>NUTRITION</h2>
+        <h3>Pre-Workout (60 min before)</h3>
+        <ul>
+            <li>Protein: 20-30g</li>
+            <li>Carbohydrates: 40-60g</li>
+            <li>Fat: 5-10g</li>
+            <li><strong>Example:</strong> 2 eggs + 2 egg whites, toast with honey, banana</li>
+        </ul>
+
+        <h3>Post-Workout (within 30 min)</h3>
+        <ul>
+            <li>Protein: 30g</li>
+            <li>Carbohydrates: 40g</li>
+            <li>Fat: minimal</li>
+            <li><strong>Example:</strong> Protein shake with banana</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>HYDRATION</h2>
+        <ul>
+            <li>Pre-workout: 16-20oz water</li>
+            <li>During workout: 16-20oz water (sipped during rest periods)</li>
+            <li>Post-workout: 16-20oz electrolyte drink</li>
+        </ul>
+    </div>
+
+    <div class="section performance-tracking">
+        <h2>PERFORMANCE TRACKING</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Time/Level</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>50m Sprint Time</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Pyramid Set Completion Time</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Max Treading Time (Hands Out)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Water Height (1-10)</td>
+                    <td></td>
+                    <td>Visual height maintained</td>
+                </tr>
+                <tr>
+                    <td>O2 Table Comfort (1-10)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>First Breath Urge Time</td>
+                    <td></td>
+                    <td>Time in seconds</td>
+                </tr>
+                <tr>
+                    <td>RPE (1-10)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

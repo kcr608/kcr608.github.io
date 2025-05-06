@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friday PM: Mixed Modal Conditioning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav">
+        <button class="nav-button" onclick="goToToday()">Today's Workout</button>
+        <button class="nav-button" onclick="window.location.href='index.html'">Overview</button>
+        <button class="nav-button" onclick="window.location.href='friday_am.html'">Friday AM</button>
+        <button class="nav-button" onclick="window.location.href='saturday_am.html'">Saturday AM</button>
+    </div>
+
+    <h1>FRIDAY PM: MIXED MODAL CONDITIONING</h1>
+    
+    <div class="progress-container">
+        <p>Completion: <span id="completion-counter">0/0 (0%)</span></p>
+        <div class="progress-bar">
+            <div id="progress-bar-fill" style="width: 0%"></div>
+        </div>
+        <button onclick="resetCheckboxes()">Reset Progress</button>
+    </div>
+
+    <div class="section">
+        <h2>FOCUS</h2>
+        <p>Mixed cardio conditioning, work capacity, mental toughness</p>
+    </div>
+
+    <div class="section">
+        <h2>DURATION</h2>
+        <p>60-70 minutes</p>
+    </div>
+
+    <div class="section">
+        <h2>LOCATION</h2>
+        <p>Sam's Gym (cardio equipment variety)</p>
+    </div>
+
+    <div class="section">
+        <h2>WARM-UP (8 minutes)</h2>
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Light Cardio</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>5 minutes - <span class="blue-equip">Rower</span>, <span class="green-equip">bike</span>, or light jog</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Dynamic Movement Prep</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>3 minutes - Full body mobility flow</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>MULTI-STATION CARDIO CIRCUIT (40 minutes)</h2>
+        <p><strong>Note:</strong> Complete 4 rounds of the circuit. Spend 4 minutes at each station before moving to the next with minimal transition time.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Station</th>
+                    <th>Duration</th>
+                    <th>Format</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="blue-equip">Rowing Machine</span></td>
+                    <td>4 minutes</td>
+                    <td>30s sprint / 30s recovery</td>
+                    <td>Max effort during sprints<br>Moderate pace during recovery</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="green-equip">Assault Bike</span></td>
+                    <td>4 minutes</td>
+                    <td>30s sprint / 30s recovery</td>
+                    <td>Max effort during sprints<br>Easy pace during recovery</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="black-equip">Stair Machine</span></td>
+                    <td>4 minutes</td>
+                    <td>30s sprint / 30s recovery</td>
+                    <td>Max effort during sprints<br>Slow pace during recovery</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Movement Station</td>
+                    <td>4 minutes</td>
+                    <td>40 seconds work / 20 seconds rest</td>
+                    <td>Alternate between:<br>- Burpees<br>- Mountain Climbers<br>- Box Jumps<br>- Push-ups</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Rest between rounds</td>
+                    <td>1 minute</td>
+                    <td>-</td>
+                    <td>Light movement only</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>EMOM CHALLENGE (15 minutes)</h2>
+        <p><strong>Note:</strong> Every Minute on the Minute (EMOM) - perform the prescribed work at the start of each minute, then rest for the remainder of the minute.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Minute</th>
+                    <th>Exercise</th>
+                    <th>Reps</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><span class="green-equip">Kettlebell Swings</span></td>
+                    <td>15</td>
+                    <td>Heavy weight</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Push-ups</td>
+                    <td>15</td>
+                    <td>Full range of motion</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><span class="orange-equip">Box Jumps</span></td>
+                    <td>10</td>
+                    <td>Step down, don't jump down</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>4 (Repeat sequence for 15 minutes total)</td>
+                    <td>Active Recovery</td>
+                    <td>-</td>
+                    <td>Light movement, controlled breathing</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>BREATH TRAINING (10 minutes)</h2>
+        <p><strong>Note:</strong> Use the breath training app for guided CO2 tables. Safe surface breath-hold practice only.</p>
+        
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">CO2 Tables on App</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>10 minutes - Surface breath-hold practice with app guidance</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>COOL-DOWN (5 minutes)</h2>
+        <ul>
+            <li>Light cardio: 3 minutes at very low intensity</li>
+            <li>Breathing recovery: 5 rounds of 4-7-8 breathing pattern</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>NUTRITION</h2>
+        <h3>Pre-Workout (60-90 min before)</h3>
+        <ul>
+            <li>Protein: 20-30g</li>
+            <li>Carbohydrates: 30-50g</li>
+            <li>Fat: 5-10g</li>
+            <li><strong>Example:</strong> Greek yogurt with granola and fruit</li>
+        </ul>
+
+        <h3>Post-Workout (within 30 min)</h3>
+        <ul>
+            <li>Protein: 30-40g</li>
+            <li>Carbohydrates: 30-50g</li>
+            <li>Fat: 10-15g</li>
+            <li><strong>Example:</strong> Chicken or fish with sweet potato and vegetables</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>HYDRATION</h2>
+        <ul>
+            <li>Pre-workout: 16-20oz water</li>
+            <li>During workout: 24-32oz water</li>
+            <li>Post-workout: 16-20oz electrolyte drink</li>
+        </ul>
+    </div>
+
+    <div class="section performance-tracking">
+        <h2>PERFORMANCE TRACKING</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rowing Machine</td>
+                    <td></td>
+                    <td>Distance/Calories</td>
+                </tr>
+                <tr>
+                    <td>Assault Bike</td>
+                    <td></td>
+                    <td>Distance/Calories</td>
+                </tr>
+                <tr>
+                    <td>Stair Machine</td>
+                    <td></td>
+                    <td>Floors/Steps</td>
+                </tr>
+                <tr>
+                    <td>Movement Station</td>
+                    <td></td>
+                    <td>Reps completed</td>
+                </tr>
+                <tr>
+                    <td>EMOM Completion</td>
+                    <td></td>
+                    <td>Full/Partial</td>
+                </tr>
+                <tr>
+                    <td>CO2 Table Comfort</td>
+                    <td></td>
+                    <td>1-10 scale</td>
+                </tr>
+                <tr>
+                    <td>Heart Rate (avg)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Heart Rate (max)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>RPE (1-10)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

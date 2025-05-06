@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunday: Active Recovery & Mobility</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav">
+        <button class="nav-button" onclick="goToToday()">Today's Workout</button>
+        <button class="nav-button" onclick="window.location.href='index.html'">Overview</button>
+        <button class="nav-button" onclick="window.location.href='saturday_pm.html'">Saturday PM</button>
+        <button class="nav-button" onclick="window.location.href='monday_am.html'">Monday AM</button>
+    </div>
+
+    <h1>SUNDAY: ACTIVE RECOVERY & MOBILITY</h1>
+    
+    <div class="progress-container">
+        <p>Completion: <span id="completion-counter">0/0 (0%)</span></p>
+        <div class="progress-bar">
+            <div id="progress-bar-fill" style="width: 0%"></div>
+        </div>
+        <button onclick="resetCheckboxes()">Reset Progress</button>
+    </div>
+
+    <div class="section">
+        <h2>FOCUS</h2>
+        <p>Recovery enhancement, tissue quality, nervous system balance, mobility</p>
+    </div>
+
+    <div class="section">
+        <h2>DURATION</h2>
+        <p>50-60 minutes</p>
+    </div>
+
+    <div class="section">
+        <h2>LOCATION</h2>
+        <p>Sam's Gym or at home</p>
+    </div>
+
+    <div class="section">
+        <h2>LIGHT MOVEMENT (10 minutes)</h2>
+        <p><strong>Note:</strong> Keep intensity very low, focus on blood flow and gentle movement</p>
+        
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Light Walking/Cycling/Rowing</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>10 minutes - HR < 120 bpm</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>FOAM ROLLING SEQUENCE (15 minutes)</h2>
+        <p><strong>Note:</strong> Spend 45-60 seconds on each area, focus on quality over speed</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Body Part</th>
+                    <th>Duration</th>
+                    <th>Technique</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Calves</td>
+                    <td>1 minute each</td>
+                    <td>Cross-fiber and lengthwise</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Hamstrings</td>
+                    <td>1 minute each</td>
+                    <td>Rotate leg to hit medial/lateral</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Quads</td>
+                    <td>1 minute each</td>
+                    <td>Roll from hip to knee</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>IT Bands</td>
+                    <td>1 minute each</td>
+                    <td>Light pressure, slow movement</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Glutes</td>
+                    <td>1 minute each</td>
+                    <td>Target all portions including piriformis</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Lats</td>
+                    <td>1 minute each</td>
+                    <td>Roll from armpit to mid-back</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Upper Back</td>
+                    <td>1 minute</td>
+                    <td>Focus on thoracic spine</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>MOBILITY FLOW (20 minutes)</h2>
+        <p><strong>Note:</strong> Move through each position with control, focus on breathing and range of motion</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Sequence</th>
+                    <th>Duration</th>
+                    <th>Focus</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hip Mobility Series</td>
+                    <td>5 minutes</td>
+                    <td>90/90 positions, pigeon variations</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Shoulder 360° Series</td>
+                    <td>5 minutes</td>
+                    <td>All planes of shoulder motion</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Thoracic Mobility</td>
+                    <td>5 minutes</td>
+                    <td>Extensions, rotations, side bends</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Ankle/Foot Series</td>
+                    <td>3 minutes</td>
+                    <td>Dorsiflexion, plantar flexion</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Wrist/Elbow Series</td>
+                    <td>2 minutes</td>
+                    <td>Circles, flexion/extension</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>NERVOUS SYSTEM RECOVERY (10 minutes)</h2>
+        <p><strong>Note:</strong> Focus on parasympathetic activation and relaxation</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Technique</th>
+                    <th>Duration</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Box Breathing</td>
+                    <td>5 minutes</td>
+                    <td>4-4-4-4 pattern (in-hold-out-hold)</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Body Scan</td>
+                    <td>5 minutes</td>
+                    <td>Progressive relaxation technique</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>CONTRAST THERAPY (optional, 10 minutes)</h2>
+        <p><strong>Note:</strong> If available, otherwise skip</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Duration</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hot Shower/Bath</td>
+                    <td>1 minute</td>
+                    <td>As warm as comfortable</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Cold Shower</td>
+                    <td>30 seconds</td>
+                    <td>As cold as tolerable</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Repeat 5-7 cycles</td>
+                    <td></td>
+                    <td>End on cold</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>NUTRITION FOCUS</h2>
+        <p><strong>Note:</strong> Recovery-focused nutrition is crucial today</p>
+        
+        <ul>
+            <li><strong>Protein:</strong> Maintain regular intake (1.8-2.0g/lb)</li>
+            <li><strong>Carbohydrates:</strong> Moderate (2.5-3.0g/lb) focusing on whole food sources</li>
+            <li><strong>Fats:</strong> Slightly higher (0.5-0.7g/lb) including anti-inflammatory sources</li>
+            <li><strong>Hydration:</strong> 0.7 × bodyweight in ounces of water</li>
+            <li><strong>Anti-inflammatory foods:</strong> Berries, fatty fish, turmeric, tart cherry juice</li>
+        </ul>
+
+        <h3>Sample Meals:</h3>
+        <ul>
+            <li><strong>Breakfast:</strong> Salmon, eggs, avocado, sweet potato</li>
+            <li><strong>Lunch:</strong> Chicken, quinoa, mixed vegetables, olive oil</li>
+            <li><strong>Dinner:</strong> Grass-fed beef, rice, broccoli, mixed berries</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>SLEEP OPTIMIZATION</h2>
+        <ul>
+            <li>Target 8-9 hours of sleep tonight</li>
+            <li>Maintain consistent sleep/wake times</li>
+            <li>Limit screen exposure 1-2 hours before bed</li>
+            <li>Keep room cool (65-68°F) and dark</li>
+            <li>Consider magnesium supplementation (300-400mg)</li>
+        </ul>
+    </div>
+
+    <div class="section performance-tracking">
+        <h2>RECOVERY TRACKING</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Rating (1-10)</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Overall Body Soreness</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mental Fatigue</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Motivation Level</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Sleep Quality (Last Night)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Hydration Status</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mobility Improvement</td>
+                    <td></td>
+                    <td>Target specific areas</td>
+                </tr>
+                <tr>
+                    <td>Readiness for Next Week</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>PREPARATION FOR NEXT WEEK</h2>
+        <ul>
+            <li>Review weekly progression tracking sheet</li>
+            <li>Identify areas of weakness to focus on</li>
+            <li>Set performance goals for the coming week</li>
+            <li>Prepare nutrition and supplements</li>
+            <li>Check equipment needs</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

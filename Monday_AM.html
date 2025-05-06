@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monday AM: Lower Body Strength & HIIT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav">
+        <button class="nav-button" onclick="goToToday()">Today's Workout</button>
+        <button class="nav-button" onclick="window.location.href='index.html'">Overview</button>
+        <button class="nav-button" onclick="window.location.href='monday_pm.html'">Monday PM</button>
+        <button class="nav-button" onclick="window.location.href='tuesday_am.html'">Tuesday AM</button>
+    </div>
+
+    <h1>MONDAY AM: LOWER BODY STRENGTH & HIIT</h1>
+    
+    <div class="progress-container">
+        <p>Completion: <span id="completion-counter">0/0 (0%)</span></p>
+        <div class="progress-bar">
+            <div id="progress-bar-fill" style="width: 0%"></div>
+        </div>
+        <button onclick="resetCheckboxes()">Reset Progress</button>
+    </div>
+
+    <div class="section">
+        <h2>FOCUS</h2>
+        <p>Maximum strength, power, joint loading, work capacity</p>
+    </div>
+
+    <div class="section">
+        <h2>DURATION</h2>
+        <p>80-90 minutes</p>
+    </div>
+
+    <div class="section">
+        <h2>LOCATION</h2>
+        <p>Sam's Gym (heavy lifting focus)</p>
+    </div>
+
+    <div class="section">
+        <h2>WARM-UP (8 minutes)</h2>
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Dynamic Mobility Flow</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>2 minutes - Hip circles, knee circles, ankle rotations</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Bodyweight Squats</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>2 × 12 reps - Focus on depth and posture</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Walking Lunges</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>2 × 8/leg - Add rotation at bottom for thoracic mobility</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Box Jumps</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>2 × 6 reps - Moderate height, focus on soft landings</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>PRIMARY STRENGTH WORK (40 minutes)</h2>
+        <p><strong>Note:</strong> Perform calisthenic exercises IMMEDIATELY after each strength set with minimal transition time. Rest only after completing both elements.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Strength Exercise</th>
+                    <th>Calisthenic Pair</th>
+                    <th>Sets</th>
+                    <th>Loading/Reps</th>
+                    <th>Rest</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="blue-equip">Back Squat</span></td>
+                    <td><span class="black-equip">Push-ups</span></td>
+                    <td>4</td>
+                    <td>
+                        1 × 5 @ 50%<br>
+                        1 × 3 @ 70%<br>
+                        3 × 5 @ 80-85%
+                    </td>
+                    <td>60s</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="blue-equip">Romanian Deadlift</span></td>
+                    <td><span class="purple-equip">Pull-ups</span></td>
+                    <td>3</td>
+                    <td>
+                        1 × 5 @ 50%<br>
+                        1 × 3 @ 70%<br>
+                        3 × 6 @ 75-80%
+                    </td>
+                    <td>60s</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="blue-equip">Front Squat</span></td>
+                    <td><span class="purple-equip">Dips</span></td>
+                    <td>3</td>
+                    <td>
+                        1 × 5 @ 50%<br>
+                        1 × 3 @ 70%<br>
+                        3 × 6 @ 75%
+                    </td>
+                    <td>60s</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="blue-equip">Barbell Hip Thrust</span></td>
+                    <td>Mountain Climbers</td>
+                    <td>3</td>
+                    <td>
+                        1 × 8 @ 50%<br>
+                        1 × 5 @ 70%<br>
+                        3 × 8 @ 80%
+                    </td>
+                    <td>45s</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>HIIT FINISHER (25 minutes)</h2>
+        <p><strong>Note:</strong> Complete 4 rounds with 40 seconds work/20 seconds rest</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Exercise</th>
+                    <th>Work</th>
+                    <th>Rest</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="orange-equip">Box Jumps</span></td>
+                    <td>40s</td>
+                    <td>20s</td>
+                    <td>Maximum effort</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="green-equip">Kettlebell Swings</span></td>
+                    <td>40s</td>
+                    <td>20s</td>
+                    <td>Heavy weight</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Burpees</td>
+                    <td>40s</td>
+                    <td>20s</td>
+                    <td>Full extension</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="red-equip">Medicine Ball Slams</span></td>
+                    <td>40s</td>
+                    <td>20s</td>
+                    <td>Maximum power</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Rest between rounds</td>
+                    <td>-</td>
+                    <td>60s</td>
+                    <td>Light movement</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>COOL-DOWN (5 minutes)</h2>
+        <ul>
+            <li>Light walking: 2 minutes</li>
+            <li>Breathing recovery: 5 deep diaphragmatic breaths</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>NUTRITION</h2>
+        <h3>Pre-Workout (60-90 min before)</h3>
+        <ul>
+            <li>Protein: 30-40g</li>
+            <li>Carbohydrates: 50-70g</li>
+            <li>Fat: 10-15g</li>
+            <li><strong>Example:</strong> 4 eggs, 1 cup oatmeal with honey and berries</li>
+        </ul>
+
+        <h3>Post-Workout (within 30 min)</h3>
+        <ul>
+            <li>Protein: 30-40g</li>
+            <li>Carbohydrates: 50-70g</li>
+            <li>Fat: minimal</li>
+            <li><strong>Example:</strong> Protein shake with banana, honey, and berries</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>HYDRATION</h2>
+        <ul>
+            <li>Pre-workout: 16-20oz water</li>
+            <li>During workout: 24-32oz water</li>
+            <li>Post-workout: 16-20oz electrolyte drink</li>
+        </ul>
+    </div>
+
+    <div class="section performance-tracking">
+        <h2>PERFORMANCE TRACKING</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Sets × Reps</th>
+                    <th>Weight</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Back Squat</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Romanian Deadlift</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Front Squat</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Barbell Hip Thrust</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Push-up Reps</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Pull-up Reps</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Dip Reps</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>RPE (1-10)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

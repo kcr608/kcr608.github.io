@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friday AM: Mixed Strength & HIIT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav">
+        <button class="nav-button" onclick="goToToday()">Today's Workout</button>
+        <button class="nav-button" onclick="window.location.href='index.html'">Overview</button>
+        <button class="nav-button" onclick="window.location.href='friday_pm.html'">Friday PM</button>
+        <button class="nav-button" onclick="window.location.href='thursday_am.html'">Thursday AM</button>
+    </div>
+
+    <h1>FRIDAY AM: MIXED STRENGTH & HIIT</h1>
+    
+    <div class="progress-container">
+        <p>Completion: <span id="completion-counter">0/0 (0%)</span></p>
+        <div class="progress-bar">
+            <div id="progress-bar-fill" style="width: 0%"></div>
+        </div>
+        <button onclick="resetCheckboxes()">Reset Progress</button>
+    </div>
+
+    <div class="section">
+        <h2>FOCUS</h2>
+        <p>Integrated strength, complex coordination, multi-joint loading</p>
+    </div>
+
+    <div class="section">
+        <h2>DURATION</h2>
+        <p>80-90 minutes</p>
+    </div>
+
+    <div class="section">
+        <h2>LOCATION</h2>
+        <p>Sam's Gym (comprehensive equipment)</p>
+    </div>
+
+    <div class="section">
+        <h2>WARM-UP (8 minutes)</h2>
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Dynamic Mobility Flow</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>3 minutes - Full-body movement preparation</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Bodyweight Circuit</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>1 round - 10 squats, 10 push-ups, 10 lunges, 10 rows</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Box Jumps</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>2 × 5 - <span class="orange-equip">Low box</span>, focus on soft landings</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>INTEGRATED STRENGTH CIRCUIT (40 minutes)</h2>
+        <p><strong>Note:</strong> Complete 3 rounds of the entire circuit. Rest 60 seconds between each exercise and 2 minutes between rounds.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Exercise</th>
+                    <th>Reps</th>
+                    <th>Loading</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="blue-equip">Clean & Press</span></td>
+                    <td>5</td>
+                    <td>
+                        1 × 5 @ 50%<br>
+                        1 × 3 @ 70%<br>
+                        3 × 5 @ 75-80%
+                    </td>
+                    <td>Focus on technique</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="purple-equip">Pull-up</span> + <span class="blue-equip">Dip</span> Superset</td>
+                    <td>8 each</td>
+                    <td>Bodyweight</td>
+                    <td>Minimal rest between movements</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="blue-equip">Front Squat</span> + <span class="blue-equip">Row</span> Superset</td>
+                    <td>10 each</td>
+                    <td>70% 1RM</td>
+                    <td>Same barbell weight</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="orange-equip">Box Jump</span> + Push-up Superset</td>
+                    <td>6 + 15</td>
+                    <td>24" box + bodyweight</td>
+                    <td>Explosive power</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="green-equip">Kettlebell Swing</span> + Hollow Hold</td>
+                    <td>15 + 30s</td>
+                    <td>Heavy KB + bodyweight</td>
+                    <td>Power and core</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>COMPLEXES (10 minutes)</h2>
+        <p><strong>Note:</strong> Perform each complex as continuous flow without setting weight down. Complete 3 rounds with 90 seconds rest between rounds.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Complex</th>
+                    <th>Reps</th>
+                    <th>Loading</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="blue-equip">Barbell Complex</span></td>
+                    <td>5 each movement</td>
+                    <td>60% of lowest 1RM</td>
+                    <td>Deadlift → Row → Hang Clean → Front Squat → Push Press → Back Rack Lunge</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="green-equip">Kettlebell Complex</span></td>
+                    <td>5 each movement</td>
+                    <td>Moderate weight</td>
+                    <td>Swing → Clean → Goblet Squat → Press → Reverse Lunge</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>HIIT FINISHER (25 minutes)</h2>
+        <p><strong>Note:</strong> Complete 4 rounds with 40 seconds work/20 seconds rest</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Exercise</th>
+                    <th>Work</th>
+                    <th>Rest</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="blue-equip">Rowing Machine</span></td>
+                    <td>40s</td>
+                    <td>20s</td>
+                    <td>Maximum effort</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="green-equip">Kettlebell Swings</span></td>
+                    <td>40s</td>
+                    <td>20s</td>
+                    <td>Heavy weight</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Burpee Box Jump</td>
+                    <td>40s</td>
+                    <td>20s</td>
+                    <td><span class="orange-equip">Box</span> - Full burpee then jump</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="red-equip">Medicine Ball Slams</span></td>
+                    <td>40s</td>
+                    <td>20s</td>
+                    <td>Maximum power</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Battle Ropes (alternate)</td>
+                    <td>40s</td>
+                    <td>20s</td>
+                    <td>Maximum power</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Rest between rounds</td>
+                    <td>-</td>
+                    <td>60s</td>
+                    <td>Active recovery</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>COOL-DOWN (5 minutes)</h2>
+        <ul>
+            <li>Light cardio: 2 minutes on rower or bike</li>
+            <li>Breathing recovery: 5 deep diaphragmatic breaths</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>NUTRITION</h2>
+        <h3>Pre-Workout (60-90 min before)</h3>
+        <ul>
+            <li>Protein: 30-40g</li>
+            <li>Carbohydrates: 40-60g</li>
+            <li>Fat: 10-15g</li>
+            <li><strong>Example:</strong> 4 egg whites + 1 whole egg, oatmeal with honey and berries</li>
+        </ul>
+
+        <h3>Post-Workout (within 30 min)</h3>
+        <ul>
+            <li>Protein: 30-40g</li>
+            <li>Carbohydrates: 40-60g</li>
+            <li>Fat: minimal</li>
+            <li><strong>Example:</strong> Protein shake with banana and honey</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>HYDRATION</h2>
+        <ul>
+            <li>Pre-workout: 16-20oz water</li>
+            <li>During workout: 24-32oz water</li>
+            <li>Post-workout: 16-20oz electrolyte drink</li>
+        </ul>
+    </div>
+
+    <div class="section performance-tracking">
+        <h2>PERFORMANCE TRACKING</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Exercise</th>
+                    <th>Weight</th>
+                    <th>Reps</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Clean & Press</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Pull-up/Dip Superset</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Front Squat/Row</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Box Jump/Push-up</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Barbell Complex</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Kettlebell Complex</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>HIIT Performance</td>
+                    <td></td>
+                    <td></td>
+                    <td>Watts/Cals/Distance</td>
+                </tr>
+                <tr>
+                    <td>RPE (1-10)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

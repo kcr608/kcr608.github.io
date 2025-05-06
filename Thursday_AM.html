@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thursday AM: 3-Mile Run & Strength</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav">
+        <button class="nav-button" onclick="goToToday()">Today's Workout</button>
+        <button class="nav-button" onclick="window.location.href='index.html'">Overview</button>
+        <button class="nav-button" onclick="window.location.href='thursday_pm.html'">Thursday PM</button>
+        <button class="nav-button" onclick="window.location.href='wednesday_am.html'">Wednesday AM</button>
+    </div>
+
+    <h1>THURSDAY AM: 3-MILE RUN & STRENGTH</h1>
+    
+    <div class="progress-container">
+        <p>Completion: <span id="completion-counter">0/0 (0%)</span></p>
+        <div class="progress-bar">
+            <div id="progress-bar-fill" style="width: 0%"></div>
+        </div>
+        <button onclick="resetCheckboxes()">Reset Progress</button>
+    </div>
+
+    <div class="section">
+        <h2>FOCUS</h2>
+        <p>Running performance, muscular strength, work capacity</p>
+    </div>
+
+    <div class="section">
+        <h2>DURATION</h2>
+        <p>75-90 minutes</p>
+    </div>
+
+    <div class="section">
+        <h2>LOCATION</h2>
+        <p>Sam's Gym (400m track or running path)</p>
+    </div>
+
+    <div class="section">
+        <h2>WARM-UP (10 minutes)</h2>
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Light Jog</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>800m (2 laps) - Very easy pace</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Dynamic Mobility Flow</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>3 minutes - Hip circles, knee circles, ankle rotations</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Running Drills</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>30m each - High knees, butt kicks, skipping, carioca</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Strides</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>4 × 50m - Progressive effort (60-70-80-90%)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>3-MILE TIMED RUN (21-30 minutes)</h2>
+        <p><strong>Note:</strong> This is a performance assessment. Record your time and pace for tracking progress.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Distance</th>
+                    <th>Target</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Performance Run</td>
+                    <td>3 miles (12 laps)</td>
+                    <td>Sub-24 minutes</td>
+                    <td>Start controlled, negative split if possible<br>Focus on consistent pacing<br>Maintain form under fatigue<br>Record splits every mile</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Recovery</td>
+                    <td>5 minutes</td>
+                    <td>Active recovery</td>
+                    <td>Walking and light jogging</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>STRENGTH CIRCUIT (30 minutes)</h2>
+        <p><strong>Note:</strong> Complete 3 rounds of this circuit. Minimal rest between exercises, 2 minutes rest between rounds.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Exercise</th>
+                    <th>Reps</th>
+                    <th>Loading</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="blue-equip">Deadlift</span></td>
+                    <td>8</td>
+                    <td>Heavy (75-80% 1RM)</td>
+                    <td>Focus on perfect form</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="purple-equip">Pull-ups</span></td>
+                    <td>Max</td>
+                    <td>Bodyweight</td>
+                    <td>Full range of motion</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="blue-equip">Front Squat</span></td>
+                    <td>10</td>
+                    <td>Moderate-Heavy (70% 1RM)</td>
+                    <td>Maintain upright torso</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="blue-equip">Push Press</span></td>
+                    <td>8</td>
+                    <td>Moderate-Heavy (70% 1RM)</td>
+                    <td>Drive through heels</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td><span class="orange-equip">Box Jumps</span></td>
+                    <td>8</td>
+                    <td>24" box</td>
+                    <td>Soft landings</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Ab Wheel Rollouts</td>
+                    <td>10-15</td>
+                    <td>Bodyweight</td>
+                    <td>Control extension</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>HIIT FINISHER (10 minutes)</h2>
+        <p><strong>Note:</strong> Choose ONE of the following options based on available equipment</p>
+        
+        <h3>OPTION A: STAIR MACHINE HIIT</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Interval</th>
+                    <th>Duration</th>
+                    <th>Intensity</th>
+                    <th>Rest</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="black-equip">Stair Sprint</span></td>
+                    <td>30 seconds</td>
+                    <td>Maximum effort</td>
+                    <td>30 seconds</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Repeat for 10 rounds</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>OPTION B: ROWING MACHINE HIIT</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Interval</th>
+                    <th>Distance</th>
+                    <th>Intensity</th>
+                    <th>Rest</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="blue-equip">Row Sprint</span></td>
+                    <td>250m</td>
+                    <td>Maximum effort</td>
+                    <td>60 seconds</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Repeat for 6-8 rounds</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>COOL-DOWN (5 minutes)</h2>
+        <ul>
+            <li>Light walking: 3 minutes</li>
+            <li>Deep breathing: 5-10 diaphragmatic breaths</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>NUTRITION</h2>
+        <h3>Pre-Workout (60-90 min before)</h3>
+        <ul>
+            <li>Protein: 20-30g</li>
+            <li>Carbohydrates: 40-60g</li>
+            <li>Fat: 5-10g</li>
+            <li><strong>Example:</strong> 2-3 eggs, toast with honey, banana</li>
+        </ul>
+
+        <h3>Post-Workout (within 30 min)</h3>
+        <ul>
+            <li>Protein: 30-40g</li>
+            <li>Carbohydrates: 40-60g</li>
+            <li>Fat: minimal</li>
+            <li><strong>Example:</strong> Protein shake with fruit and honey</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>HYDRATION</h2>
+        <ul>
+            <li>Pre-workout: 16-20oz water</li>
+            <li>During workout: 24-32oz water</li>
+            <li>Post-workout: 16-20oz electrolyte drink</li>
+        </ul>
+    </div>
+
+    <div class="section performance-tracking">
+        <h2>PERFORMANCE TRACKING</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3-Mile Time</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mile 1 Split</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mile 2 Split</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mile 3 Split</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Average HR</td>
+                    <td></td>
+                    <td>If available</td>
+                </tr>
+                <tr>
+                    <td>Max HR</td>
+                    <td></td>
+                    <td>If available</td>
+                </tr>
+                <tr>
+                    <td>Deadlift Weight</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Pull-up Reps</td>
+                    <td></td>
+                    <td>Total across rounds</td>
+                </tr>
+                <tr>
+                    <td>Front Squat Weight</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Push Press Weight</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>HIIT Performance</td>
+                    <td></td>
+                    <td>Levels/Watts/Distance</td>
+                </tr>
+                <tr>
+                    <td>RPE (1-10)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

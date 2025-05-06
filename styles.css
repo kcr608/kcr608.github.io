@@ -1,0 +1,198 @@
+/* Base styles */
+:root {
+    --red: #e74c3c;
+    --blue: #3498db;
+    --green: #2ecc71;
+    --purple: #9b59b6;
+    --orange: #e67e22;
+    --gray: #95a5a6;
+    --black: #34495e;
+    --background: #f9f9f9;
+    --card: #ffffff;
+    --text: #333333;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+    padding: 0 10px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1, h2, h3, h4 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+  
+  h1 {
+    text-align: center;
+    color: var(--black);
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: var(--black);
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 5px;
+  }
+  
+  p {
+    margin-bottom: 15px;
+  }
+  
+  /* Exercise Cards */
+  .exercise-card {
+    background-color: var(--card);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: transform 0.2s;
+  }
+  
+  .exercise-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  .exercise-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .exercise-name {
+    font-weight: 600;
+    font-size: 1.1em;
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Equipment Colors */
+  .red-equip { color: var(--red); font-weight: 600; }
+  .blue-equip { color: var(--blue); font-weight: 600; }
+  .green-equip { color: var(--green); font-weight: 600; }
+  .purple-equip { color: var(--purple); font-weight: 600; }
+  .orange-equip { color: var(--orange); font-weight: 600; }
+  .black-equip { color: var(--black); font-weight: 600; }
+  
+  /* Checkboxes */
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--gray);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 8px;
+    position: relative;
+    background-color: white;
+  }
+  
+  .custom-checkbox:checked {
+    background-color: var(--green);
+    border-color: var(--green);
+  }
+  
+  .custom-checkbox:checked::after {
+    content: '✓';
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Navigation */
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 0;
+  }
+  
+  .nav-button {
+    background-color: var(--black);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .nav-button:hover {
+    background-color: var(--gray);
+  }
+  
+  /* Sections */
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  /* Progress tracking */
+  .performance-tracking {
+    margin-top: 20px;
+  }
+  
+  /* Mobile-first design */
+  @media (max-width: 600px) {
+    body {
+      padding: 0 5px;
+    }
+    
+    table {
+      font-size: 0.8em;
+    }
+    
+    th, td {
+      padding: 5px;
+    }
+    
+    .exercise-card {
+      padding: 10px;
+    }
+  }

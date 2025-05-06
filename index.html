@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Program Overview</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .day-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px;
+            transition: transform 0.2s;
+        }
+        
+        .day-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .day-card h3 {
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+        }
+        
+        .day-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        
+        .day-link {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #34495e;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        
+        .equipment-list {
+            margin-top: 20px;
+        }
+        
+        .equipment-item {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <button class="nav-button" onclick="goToToday()">Today's Workout</button>
+        <button class="nav-button" onclick="window.location.href='nutrition_guide.html'">Nutrition Guide</button>
+    </div>
+
+    <h1>Training Program</h1>
+    
+    <div class="section">
+        <h2>Program Philosophy</h2>
+        <p>This program integrates strength training with calisthenics in an AM/PM split design. It emphasizes CNS development and joint strengthening with a focus on optimizing 1.5-mile run time.</p>
+    </div>
+
+    <div class="section">
+        <h2>Weekly Structure</h2>
+        <div class="program-grid">
+            <div class="day-card">
+                <h3>Monday</h3>
+                <p><strong>Focus:</strong> Lower Body Strength + Cardio Recovery</p>
+                <p><strong>Location:</strong> Sam's Gym</p>
+                <div class="day-links">
+                    <a href="monday_am.html" class="day-link">AM Workout</a>
+                    <a href="monday_pm.html" class="day-link">PM Workout</a>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <h3>Tuesday</h3>
+                <p><strong>Focus:</strong> Push Strength + Track Circuit</p>
+                <p><strong>Location:</strong> Sam's Gym</p>
+                <div class="day-links">
+                    <a href="tuesday_am.html" class="day-link">AM Workout</a>
+                    <a href="tuesday_pm.html" class="day-link">PM Workout</a>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <h3>Wednesday</h3>
+                <p><strong>Focus:</strong> Pull Strength + Recovery Cardio</p>
+                <p><strong>Location:</strong> Sam's Gym</p>
+                <div class="day-links">
+                    <a href="wednesday_am.html" class="day-link">AM Workout</a>
+                    <a href="wednesday_pm.html" class="day-link">PM Workout</a>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <h3>Thursday</h3>
+                <p><strong>Focus:</strong> 3-Mile Run + Functional Strength</p>
+                <p><strong>Location:</strong> Sam's Gym</p>
+                <div class="day-links">
+                    <a href="thursday_am.html" class="day-link">AM Workout</a>
+                    <a href="thursday_pm.html" class="day-link">PM Workout</a>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <h3>Friday</h3>
+                <p><strong>Focus:</strong> Mixed Strength + Cardio</p>
+                <p><strong>Location:</strong> Sam's Gym</p>
+                <div class="day-links">
+                    <a href="friday_am.html" class="day-link">AM Workout</a>
+                    <a href="friday_pm.html" class="day-link">PM Workout</a>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <h3>Saturday</h3>
+                <p><strong>Focus:</strong> Swimming + Treading + Long Run</p>
+                <p><strong>Location:</strong> Air Force Gym (Aquatics)</p>
+                <div class="day-links">
+                    <a href="saturday_am.html" class="day-link">AM Workout</a>
+                    <a href="saturday_pm.html" class="day-link">PM Workout</a>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <h3>Sunday</h3>
+                <p><strong>Focus:</strong> Active Recovery + Mobility</p>
+                <p><strong>Location:</strong> Sam's Gym or Home</p>
+                <div class="day-links">
+                    <a href="sunday.html" class="day-link">Full Day</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Training Philosophy</h2>
+        
+        <h3>Integrated Approach</h3>
+        <p>This program combines strength work with calisthenics in "complexes" that better simulate the body for needed demands. Rather than isolating movements, exercises are paired to develop performance under fatigue.</p>
+        
+        <h3>CNS Development</h3>
+        <ul>
+            <li>Neural drive enhancement through maximum recruitment exercises</li>
+            <li>Rate of force development training</li>
+            <li>Motor unit synchronization via complex movement patterns</li>
+            <li>Performance maintenance under accumulated fatigue</li>
+        </ul>
+        
+        <h3>Joint Development Focus</h3>
+        <p>Instead of just preventing injuries, this program actively strengthens joints through:</p>
+        <ul>
+            <li>Progressive loading of connective tissues</li>
+            <li>End-range strength development</li>
+            <li>Multi-directional stability training</li>
+            <li>Proprioceptive challenge progressions</li>
+        </ul>
+        
+        <h3>Cardio Focus</h3>
+        <p>Daily cardio is programmed to optimize 1.5-mile run performance:</p>
+        <ul>
+            <li>Tuesday: Track circuit for speed development</li>
+            <li>Thursday: 3-mile run for endurance building</li>
+            <li>Saturday: Long run for aerobic base development</li>
+            <li>Other days: Recovery cardio</li>
+        </ul>
+    </div>
+
+    <div class="section equipment-list">
+        <h2>Equipment Color Coding</h2>
+        <p>Each piece of equipment is color-coded in the workout plans:</p>
+        
+        <div class="equipment-item">
+            <span class="red-equip">Red:</span> Medicine Ball
+        </div>
+        <div class="equipment-item">
+            <span class="blue-equip">Blue:</span> Barbell
+        </div>
+        <div class="equipment-item">
+            <span class="green-equip">Green:</span> Kettlebell
+        </div>
+        <div class="equipment-item">
+            <span class="purple-equip">Purple:</span> Pull-up Bar
+        </div>
+        <div class="equipment-item">
+            <span class="orange-equip">Orange:</span> Plyo/Jump Box
+        </div>
+        <div class="equipment-item">
+            <span class="black-equip">Black:</span> Cardio Machines
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

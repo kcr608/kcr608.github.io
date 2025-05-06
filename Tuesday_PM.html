@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuesday PM: Track Circuit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav">
+        <button class="nav-button" onclick="goToToday()">Today's Workout</button>
+        <button class="nav-button" onclick="window.location.href='index.html'">Overview</button>
+        <button class="nav-button" onclick="window.location.href='tuesday_am.html'">Tuesday AM</button>
+        <button class="nav-button" onclick="window.location.href='wednesday_am.html'">Wednesday AM</button>
+    </div>
+
+    <h1>TUESDAY PM: TRACK CIRCUIT</h1>
+    
+    <div class="progress-container">
+        <p>Completion: <span id="completion-counter">0/0 (0%)</span></p>
+        <div class="progress-bar">
+            <div id="progress-bar-fill" style="width: 0%"></div>
+        </div>
+        <button onclick="resetCheckboxes()">Reset Progress</button>
+    </div>
+
+    <div class="section">
+        <h2>FOCUS</h2>
+        <p>Sprint power, anaerobic capacity, running economy, speed development</p>
+    </div>
+
+    <div class="section">
+        <h2>DURATION</h2>
+        <p>60-70 minutes</p>
+    </div>
+
+    <div class="section">
+        <h2>LOCATION</h2>
+        <p>Sam's Gym (400m track or running path)</p>
+    </div>
+
+    <div class="section">
+        <h2>WARM-UP (10 minutes)</h2>
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Easy Jog</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>800m (2 laps) - Very light pace</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Dynamic Stretching</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>3 minutes - Leg swings, hip circles, arm swings</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Running Drills</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>50m each - High knees, butt kicks, skipping, carioca</p>
+        </div>
+
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">Sprint Build-ups</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>2 × 50m - 50%, 75% effort progression</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>TRACK INTERVAL WORK (30 minutes)</h2>
+        <p><strong>Note:</strong> Choose ONE of the following interval sets based on current fitness level</p>
+        
+        <h3>OPTION A: SPEED DEVELOPMENT</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Interval</th>
+                    <th>Sets</th>
+                    <th>Work:Rest</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>100m Sprints</td>
+                    <td>10</td>
+                    <td>1:2 (15s sprint, 30s rest)</td>
+                    <td>Maximum effort, perfect form<br>Walk back to start for rest<br>Full recovery between efforts</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>OPTION B: LACTATE THRESHOLD DEVELOPMENT</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Interval</th>
+                    <th>Sets</th>
+                    <th>Work:Rest</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>400m Repeats</td>
+                    <td>8</td>
+                    <td>1:1 (90s run, 90s rest)</td>
+                    <td>85-90% max effort<br>Jog 100m for active recovery<br>Consistent pace across all reps</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>OPTION C: SELECTION SPECIFIC INTERVALS</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Interval</th>
+                    <th>Sets</th>
+                    <th>Format</th>
+                    <th>Notes</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>800m-400m-200m-200m-400m-800m</td>
+                    <td>1</td>
+                    <td>Pyramid</td>
+                    <td>85% effort on 800s<br>90% effort on 400s<br>95% effort on 200s<br>Rest = 50% of interval time</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>BREATH TRAINING (15 minutes)</h2>
+        <p><strong>Note:</strong> Use the breath training app for guided CO2 tables. Safe surface breath-hold practice only.</p>
+        
+        <div class="exercise-card">
+            <div class="exercise-title">
+                <span class="exercise-name">CO2 Tables on App</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" class="custom-checkbox">
+                </div>
+            </div>
+            <p>15 minutes - Surface breath-hold practice with app guidance</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>CORE CIRCUIT (10 minutes)</h2>
+        <p><strong>Note:</strong> Complete 2 rounds with minimal rest between exercises</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Exercise</th>
+                    <th>Reps/Duration</th>
+                    <th>Rest</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Plank</td>
+                    <td>60 seconds</td>
+                    <td>15s</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Bicycle Crunches</td>
+                    <td>30 each side</td>
+                    <td>15s</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Side Plank</td>
+                    <td>45 seconds each side</td>
+                    <td>15s</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>V-ups</td>
+                    <td>20 reps</td>
+                    <td>15s</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Rest between rounds</td>
+                    <td>60 seconds</td>
+                    <td>-</td>
+                    <td><input type="checkbox" class="custom-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>COOL-DOWN (5 minutes)</h2>
+        <ul>
+            <li>Easy jog: 400m (1 lap) very light pace</li>
+            <li>Walking: 2 minutes</li>
+            <li>Breathing recovery: 5 deep diaphragmatic breaths</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>NUTRITION</h2>
+        <h3>Pre-Workout (60-90 min before)</h3>
+        <ul>
+            <li>Protein: 20-30g</li>
+            <li>Carbohydrates: 40-60g</li>
+            <li>Fat: 5-10g</li>
+            <li><strong>Example:</strong> Greek yogurt with fruit and honey</li>
+        </ul>
+
+        <h3>Post-Workout (within 30 min)</h3>
+        <ul>
+            <li>Protein: 30-40g</li>
+            <li>Carbohydrates: 30-50g</li>
+            <li>Fat: 10-15g</li>
+            <li><strong>Example:</strong> Chicken or fish with sweet potato and vegetables</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>HYDRATION</h2>
+        <ul>
+            <li>Pre-workout: 16-20oz water</li>
+            <li>During workout: 24-32oz water (sipped between intervals)</li>
+            <li>Post-workout: 16-20oz electrolyte drink</li>
+        </ul>
+    </div>
+
+    <div class="section performance-tracking">
+        <h2>PERFORMANCE TRACKING</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Time/Reps</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Interval Times</td>
+                    <td></td>
+                    <td>Record each rep</td>
+                </tr>
+                <tr>
+                    <td>Recovery HR</td>
+                    <td></td>
+                    <td>15s after interval</td>
+                </tr>
+                <tr>
+                    <td>CO2 Table - First Contraction</td>
+                    <td></td>
+                    <td>Time in seconds</td>
+                </tr>
+                <tr>
+                    <td>CO2 Table - Max Contractions</td>
+                    <td></td>
+                    <td>Count</td>
+                </tr>
+                <tr>
+                    <td>Core Exercise Performance</td>
+                    <td></td>
+                    <td>Full/Partial completion</td>
+                </tr>
+                <tr>
+                    <td>RPE (1-10)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
