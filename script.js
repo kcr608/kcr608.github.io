@@ -80,10 +80,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Go to today's workout automatically
   function goToToday() {
-    const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const today = new Date().getDay();
     const currentHour = new Date().getHours();
-    const timeOfDay = currentHour < 12 ? 'am' : 'pm';
+    const timeOfDay = currentHour < 12 ? 'AM' : 'PM';
     
     window.location.href = `${days[today]}_${timeOfDay}.html`;
   }
