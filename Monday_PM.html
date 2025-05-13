@@ -1,240 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monday PM: Cardio & Recovery</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monday PM: Cardio & Recovery</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="nav">
-        <button class="nav-button" onclick="goToToday()">Today's Workout</button>
-        <button class="nav-button" onclick="window.location.href='index.html'">Overview</button>
-        <button class="nav-button" onclick="window.location.href='monday_am.html'">Monday AM</button>
-        <button class="nav-button" onclick="window.location.href='tuesday_am.html'">Tuesday AM</button>
-    </div>
+  <div class="nav">
+    <button class="nav-button" onclick="goToToday()">Today's Workout</button>
+    <button class="nav-button" onclick="window.location.href='index.html'">Overview</button>
+    <button class="nav-button" onclick="window.location.href='Monday_AM.html'">Monday AM</button>
+    <button class="nav-button" onclick="window.location.href='Tuesday_AM.html'">Tuesday AM</button>
+  </div>
 
-    <h1>MONDAY PM: CARDIO & RECOVERY</h1>
+  <h1>MONDAY PM: CARDIO & RECOVERY</h1>
+  
+  <div class="progress-container">
+    <p>Completion: <span id="completion-counter">0/0 (0%)</span></p>
+    <div class="progress-bar">
+      <div id="progress-bar-fill" style="width: 0%"></div>
+    </div>
+    <button onclick="resetCheckboxes()">Reset Progress</button>
+  </div>
+
+  <div class="section">
+    <h2>FOCUS</h2>
+    <p>Aerobic capacity, recovery, conditioning</p>
+  </div>
+
+  <div class="section">
+    <h2>DURATION</h2>
+    <p>60-70 minutes</p>
+  </div>
+
+  <div class="section">
+    <h2>LOCATION</h2>
+    <p>Sam's Gym (cardio equipment variety)</p>
+  </div>
+
+  <div class="section">
+    <h2>WARM-UP (5 minutes)</h2>
+    <div class="exercise-card">
+      <div class="exercise-title">
+        <span class="exercise-name">Light Cardio</span>
+        <div class="checkbox-container">
+          <input type="checkbox" class="custom-checkbox">
+        </div>
+      </div>
+      <p>5 minutes - <span class="black-equip">Stair machine</span>, <span class="blue-equip">rower</span>, or <span class="green-equip">bike</span> at 50-60% effort</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>STEADY STATE CARDIO (30 minutes)</h2>
+    <p><strong>Note:</strong> Choose ONE of the following options based on selection-specific focus.</p>
     
-    <div class="progress-container">
-        <p>Completion: <span id="completion-counter">0/0 (0%)</span></p>
-        <div class="progress-bar">
-            <div id="progress-bar-fill" style="width: 0%"></div>
+    <table>
+      <thead>
+        <tr>
+          <th>Option</th>
+          <th>Duration</th>
+          <th>Intensity</th>
+          <th>Notes</th>
+          <th>Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="black-equip">Stair Machine</span></td>
+          <td>30 minutes</td>
+          <td>70-75% max HR</td>
+          <td>Consistent pace, upright posture</td>
+          <td><input type="checkbox" class="custom-checkbox"></td>
+        </tr>
+        <tr>
+          <td><span class="blue-equip">Row Machine</span></td>
+          <td>30 minutes</td>
+          <td>70-75% max HR</td>
+          <td>24-26 strokes per minute</td>
+          <td><input type="checkbox" class="custom-checkbox"></td>
+        </tr>
+        <tr>
+          <td><span class="green-equip">Treadmill</span></td>
+          <td>30 minutes</td>
+          <td>70-75% max HR</td>
+          <td>1-2% incline, consistent pace</td>
+          <td><input type="checkbox" class="custom-checkbox"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>BREATH TRAINING (15 minutes)</h2>
+    <p><strong>Note:</strong> CO2 and O2 tables for breathing practice</p>
+    
+    <div class="exercise-card">
+      <div class="exercise-title">
+        <span class="exercise-name">CO2 Tables</span>
+        <div class="checkbox-container">
+          <input type="checkbox" class="custom-checkbox">
         </div>
-        <button onclick="resetCheckboxes()">Reset Progress</button>
+      </div>
+      <p>15 minutes - Fixed hold times with decreasing recovery</p>
     </div>
+  </div>
 
-    <div class="section">
-        <h2>FOCUS</h2>
-        <p>Aerobic capacity, recovery, conditioning</p>
-    </div>
+  <div class="section">
+    <h2>CORE CIRCUIT (10 minutes)</h2>
+    <p><strong>Note:</strong> Complete 3 rounds with minimal rest between exercises and 60 seconds between rounds.</p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Exercise</th>
+          <th>Reps/Duration</th>
+          <th>Focus</th>
+          <th>Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Plank</td>
+          <td>45 seconds</td>
+          <td>Full-body tension</td>
+          <td><input type="checkbox" class="custom-checkbox"></td>
+        </tr>
+        <tr>
+          <td>Russian Twists</td>
+          <td>30 each side</td>
+          <td>Controlled rotation</td>
+          <td><input type="checkbox" class="custom-checkbox"></td>
+        </tr>
+        <tr>
+          <td>Hollow Hold</td>
+          <td>30 seconds</td>
+          <td>Lower back pressed to floor</td>
+          <td><input type="checkbox" class="custom-checkbox"></td>
+        </tr>
+        <tr>
+          <td>Supermans</td>
+          <td>15 reps</td>
+          <td>2-second hold at top</td>
+          <td><input type="checkbox" class="custom-checkbox"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-    <div class="section">
-        <h2>DURATION</h2>
-        <p>60-70 minutes</p>
-    </div>
+  <div class="section">
+    <h2>COOL-DOWN & RECOVERY (5 minutes)</h2>
+    <ul>
+      <li>Light cardio: 3 minutes at very low intensity</li>
+      <li>Breathing recovery: 5 rounds of 4-7-8 breathing pattern</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h2>LOCATION</h2>
-        <p>Sam's Gym (cardio equipment variety)</p>
-    </div>
+  <div class="section">
+    <h2>NUTRITION</h2>
+    <h3>Pre-Workout (60-90 min before)</h3>
+    <ul>
+      <li>Protein: 20-30g</li>
+      <li>Carbohydrates: 30-50g</li>
+      <li>Fat: 5-10g</li>
+      <li><strong>Example:</strong> Greek yogurt with granola and fruit</li>
+    </ul>
 
-    <div class="section">
-        <h2>WARM-UP (5 minutes)</h2>
-        <div class="exercise-card">
-            <div class="exercise-title">
-                <span class="exercise-name">Light Cardio</span>
-                <div class="checkbox-container">
-                    <input type="checkbox" class="custom-checkbox">
-                </div>
-            </div>
-            <p>5 minutes - <span class="black-equip">Stair machine</span>, <span class="blue-equip">rower</span>, or <span class="green-equip">bike</span> at 50-60% effort</p>
-        </div>
-    </div>
+    <h3>Post-Workout (within 30 min)</h3>
+    <ul>
+      <li>Protein: 30-40g</li>
+      <li>Carbohydrates: 30-50g</li>
+      <li>Fat: 10-15g</li>
+      <li><strong>Example:</strong> Chicken or fish with sweet potato and vegetables</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h2>STEADY STATE CARDIO (30 minutes)</h2>
-        <p><strong>Note:</strong> Choose ONE of the following options based on selection-specific focus.</p>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>Option</th>
-                    <th>Duration</th>
-                    <th>Intensity</th>
-                    <th>Notes</th>
-                    <th>Done</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="black-equip">Stair Machine</span></td>
-                    <td>30 minutes</td>
-                    <td>70-75% max HR</td>
-                    <td>Consistent pace, upright posture</td>
-                    <td><input type="checkbox" class="custom-checkbox"></td>
-                </tr>
-                <tr>
-                    <td><span class="blue-equip">Row Machine</span></td>
-                    <td>30 minutes</td>
-                    <td>70-75% max HR</td>
-                    <td>24-26 strokes per minute</td>
-                    <td><input type="checkbox" class="custom-checkbox"></td>
-                </tr>
-                <tr>
-                    <td><span class="green-equip">Treadmill</span></td>
-                    <td>30 minutes</td>
-                    <td>70-75% max HR</td>
-                    <td>1-2% incline, consistent pace</td>
-                    <td><input type="checkbox" class="custom-checkbox"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  <div class="section">
+    <h2>HYDRATION</h2>
+    <ul>
+      <li>Pre-workout: 16-20oz water</li>
+      <li>During workout: 24-32oz water</li>
+      <li>Post-workout: 16-20oz electrolyte drink</li>
+    </ul>
+  </div>
 
-    <div class="section">
-        <h2>BREATH TRAINING (15 minutes)</h2>
-        <p><strong>Note:</strong> Use the breath training app for this section. Surface breath-hold practice with partner monitoring.</p>
-        
-        <div class="exercise-card">
-            <div class="exercise-title">
-                <span class="exercise-name">CO2 Tables on App</span>
-                <div class="checkbox-container">
-                    <input type="checkbox" class="custom-checkbox">
-                </div>
-            </div>
-            <p>15 minutes - Follow app guidance</p>
-        </div>
-    </div>
+  <div class="section performance-tracking">
+    <h2>PERFORMANCE TRACKING</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Value</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cardio Machine</td>
+          <td></td>
+          <td>Distance/Levels/Watts</td>
+        </tr>
+        <tr>
+          <td>Heart Rate (avg)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Heart Rate (max)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>First Contraction Time</td>
+          <td></td>
+          <td>When urge to breathe begins</td>
+        </tr>
+        <tr>
+          <td>Max Contractions</td>
+          <td></td>
+          <td>Number tolerated</td>
+        </tr>
+        <tr>
+          <td>RPE (1-10)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Core Circuit Completion</td>
+          <td></td>
+          <td>Full/Partial</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-    <div class="section">
-        <h2>CORE CIRCUIT (10 minutes)</h2>
-        <p><strong>Note:</strong> Complete 3 rounds with minimal rest between exercises and 60 seconds between rounds.</p>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>Exercise</th>
-                    <th>Reps/Duration</th>
-                    <th>Focus</th>
-                    <th>Done</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Plank</td>
-                    <td>45 seconds</td>
-                    <td>Full-body tension</td>
-                    <td><input type="checkbox" class="custom-checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Russian Twists</td>
-                    <td>30 each side</td>
-                    <td>Controlled rotation</td>
-                    <td><input type="checkbox" class="custom-checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Hollow Hold</td>
-                    <td>30 seconds</td>
-                    <td>Lower back pressed to floor</td>
-                    <td><input type="checkbox" class="custom-checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Supermans</td>
-                    <td>15 reps</td>
-                    <td>2-second hold at top</td>
-                    <td><input type="checkbox" class="custom-checkbox"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div class="section">
-        <h2>COOL-DOWN & RECOVERY (5 minutes)</h2>
-        <ul>
-            <li>Light cardio: 3 minutes at very low intensity</li>
-            <li>Breathing recovery: 5 rounds of 4-7-8 breathing pattern</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>NUTRITION</h2>
-        <h3>Pre-Workout (60-90 min before)</h3>
-        <ul>
-            <li>Protein: 20-30g</li>
-            <li>Carbohydrates: 30-50g</li>
-            <li>Fat: 5-10g</li>
-            <li><strong>Example:</strong> Greek yogurt with granola and fruit</li>
-        </ul>
-
-        <h3>Post-Workout (within 30 min)</h3>
-        <ul>
-            <li>Protein: 30-40g</li>
-            <li>Carbohydrates: 30-50g</li>
-            <li>Fat: 10-15g</li>
-            <li><strong>Example:</strong> Chicken or fish with sweet potato and vegetables</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>HYDRATION</h2>
-        <ul>
-            <li>Pre-workout: 16-20oz water</li>
-            <li>During workout: 24-32oz water</li>
-            <li>Post-workout: 16-20oz electrolyte drink</li>
-        </ul>
-    </div>
-
-    <div class="section performance-tracking">
-        <h2>PERFORMANCE TRACKING</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Metric</th>
-                    <th>Value</th>
-                    <th>Notes</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Cardio Machine</td>
-                    <td></td>
-                    <td>Distance/Levels/Watts</td>
-                </tr>
-                <tr>
-                    <td>Heart Rate (avg)</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Heart Rate (max)</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>First Contraction Time</td>
-                    <td></td>
-                    <td>When urge to breathe begins</td>
-                </tr>
-                <tr>
-                    <td>Max Contractions</td>
-                    <td></td>
-                    <td>Number tolerated</td>
-                </tr>
-                <tr>
-                    <td>RPE (1-10)</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Core Circuit Completion</td>
-                    <td></td>
-                    <td>Full/Partial</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <script src="script.js"></script>
+  <!-- Scripts - Load original script first, then our enhancements -->
+  <script src="script.js"></script>
+  <script src="workout-timer.js"></script>
+  <script src="breath-tables.js"></script>
+  <script src="cardio-intensity.js"></script>
 </body>
 </html>
